@@ -1,5 +1,5 @@
 import sys
-
+#값은 나오지만 밑보단 느림
 def binary(array,target,start,end):
     
     while start<=end:
