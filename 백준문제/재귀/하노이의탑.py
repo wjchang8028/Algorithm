@@ -12,4 +12,5 @@ move=[]
 hanoi(int(input()),1,2,3)
 
 print(len(move))
-print(move)
+for i in range(len(move)):
+    print(move[i][0],move[i][1])
