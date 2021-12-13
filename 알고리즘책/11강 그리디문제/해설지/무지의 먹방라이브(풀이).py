@@ -6,7 +6,7 @@ def solution(food_times, k):
         return -1
 
     #시간이 작은 음식부터 빼야하므로 우선순위 큐 사용
-    q =[]
+    q = []
 
     for i in range(len(food_times)):
         #(음식시간,음식번호) 형태로 우선순위 큐에 삽입
