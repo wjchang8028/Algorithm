@@ -44,6 +44,7 @@ def correct(n,stages):
     return answer
 
 n = 5
-stages = [2, 1, 2, 6, 2, 4, 3, 3]
+stages = [1, 1, 4, 6, 4, 4, 4, 1]
 
 correct(n,stages)
+solution(n,stages)
