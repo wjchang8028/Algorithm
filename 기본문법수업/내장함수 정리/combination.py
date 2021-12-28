@@ -19,3 +19,9 @@ print(list(product(*items)))
 #리스트의 인자들을 전부 조합하는 경우(각 숫자를 뽑아서 만들수 있는 경우의 수 )
 print(list(chain.from_iterable(permutations(item,i)for i in range(len(item)+1)))) 
 print(list(chain.from_iterable(combinations(item,i)for i in range(len(item)+1)))) 
+
+numbers = ['1','7','3']
+a = set()
+for i in range(len(numbers)):
+    a |= set(map(int,map("".join,permutations(list(numbers), i+1 )))) #|= or연산자를 하고 난 값으로 새로이 update한다는 의미
+print(a)

@@ -43,11 +43,13 @@ def other_solution(numbers):
         a |= set(map(int,map("".join,permutations(list(numbers), i+1 )))) #|= or연산자를 하고 난 값으로 새로이 update한다는 의미
     print(a)
 
-    a -= set(range(0,2))
-    for i in range(2,int(max(a)**0.5) + 1):
-        a -= set(range(i*2,max(a),i))
+    a -= set(range(0,2)) # 0과 1은 소수판별에 필요하지 않으므로 삭제
+    print(a)
+    
+    for i in range(2,int(max(a)**0.5) + 1): #에라토스테네스 체
+        a -= set(range(i*2,max(a),i)) # 조합에서 소수가 아닌 수들을 제거
 
-    print(len(a))
+    print(a)
     return len(a)
 
 # solution("1300")

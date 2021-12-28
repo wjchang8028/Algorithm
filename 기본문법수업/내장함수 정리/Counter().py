@@ -1,5 +1,4 @@
 #데이터의 갯수를 셀때 유용함
-
 from collections import Counter
 
 word = "Hello World!"
