@@ -6,6 +6,13 @@ c = Counter(word)
 array = list(c.keys())
 print(array)
 
+arr = [1,1,1,2,2,2,2,5,5,4,4,4,4] 
+c = Counter(arr) #리스트에서 중복된 값의 수를 세주기
+a = list(c.keys()) #arr의 키값 (1,2,5,4)
+print(a)
+b = list(c.values()) #arr의 키값에 묶여있는 값 카운트(3개,4개,2개,4개)
+print(b)
+
 #Counter마크를 제거한 리스트(빈도수에따라서 자동정렬)
 mostcounter = Counter(word).most_common()
 print(mostcounter)
