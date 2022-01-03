@@ -1,8 +1,10 @@
 def solution(clothes):
     answer = 0
-
+    hash_clothes = {}
 
     
+
+
     return answer
 
 
