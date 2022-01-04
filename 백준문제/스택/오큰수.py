@@ -1,21 +1,21 @@
 t = int(input())
 
 stack = list(map(int,input().split()))
+
 answer = []
 
-
-while stack:
-    count = 0
-    cursor = stack.pop(0)
-    
-    for i in stack:
-        if cursor < i:
-            count += 1
-        elif cursor >= i:
-            count = 0
-
-        if count != 0 :
-            answer.append(i)
+for i in range(t):
+    while answer:
+        if stack[i] > stack[answer[-1]]: 
+            stack[answer.pop()] = stack[i]
         else:
-            answer.append(-1)
-print(answer)
+            answer.append(i)
+            break
+    
+    if not answer:
+        answer.append(i)
+for i in answer:
+    stack[i] = -1
+        
+
+print(*stack)
