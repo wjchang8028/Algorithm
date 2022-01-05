@@ -1,3 +1,30 @@
+#사전 자료형은 key , value 로 이루어짐
+#변경불가능한 자료형을 키로 사용가능
+#해시테이블을 이용 -> O(1)시간복잡도
+
+data = dict()
+data['사과'] = 'apple'
+data['바나나'] = 'banana'
+print(data)
+# {'사과': 'apple', '바나나': 'banana'}
+
+key_list = data.keys() #키값만 뽑기
+value_list = data.values()
+print(key_list) #dict_keys(['사과', '바나나'])
+print(value_list) #dict_values(['apple', 'banana'])
+#리스트로 형변환
+print(list(key_list)) #['사과', '바나나']
+
+#각 키의 따른 값을 출력
+for key in key_list:
+    print(data[key])
+    # apple
+    # banana
+
+
+
+print("-----------------------")
+
 cabinet = {3:"유재석", 100:"김태호"} #key:value
 
 print(cabinet[3]) #키값을 빼오기
@@ -39,3 +66,4 @@ print(cabinet.items())
 #목욕탕 폐점
 cabinet.clear()
 print(cabinet)
+
