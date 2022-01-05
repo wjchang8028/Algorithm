@@ -9,6 +9,6 @@ while index >= 1:
 
 
 customer = "아이언맨"
-while True:
+while True: #무조건적으로 실행되는 while문
     print("{0}님, 커피가 준비되었습니다. 호출{1}회".format(customer,index))
     index += 1
