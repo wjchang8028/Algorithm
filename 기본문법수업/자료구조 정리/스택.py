@@ -13,3 +13,6 @@ print(stack)
 #스택에서 제거하지않고 top값을 가져올때
 top = stack[-1]
 print(top)
+
+#스택 역방향 출력
+print(stack[::-1])
