@@ -35,7 +35,7 @@ def other_solution(bridge_length, weight, truck_weights):
             bridge.append(newTruck) # 대기 트럭에서 하나 빼서 다리에 올림
             
         else: # 새 트럭이 다리에 올라갈 수 없으면
-            bridge.append(0) # 오른쪽에 0을 삽입해서 다리 길이 유지
+            bridge.append(0) # 오른쪽에 0을 삽입해서 다리 길이 유지.
             
         time += 1
     return time
