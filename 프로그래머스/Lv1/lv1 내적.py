@@ -6,7 +6,7 @@ def solution(a, b):
 
     return answer
 
-def usingzip(a,b):
+def usingzip(a,b): #zip()참고
     answer = 0
     for a,b in zip(a,b):
         answer += a*b
