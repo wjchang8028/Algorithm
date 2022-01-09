@@ -1,5 +1,5 @@
 import sys
-n , m ,k = map(int,input().split())
+n , m ,k = map(int,input().split())#입력값
 
 
 data = list(map(int,sys.stdin.readline().split()))
