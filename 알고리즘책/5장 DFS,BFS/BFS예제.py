@@ -16,7 +16,7 @@ def bfs(graph,start,visited):
         print(v,end=' ')
 
         #해당 원소와 연결된, 아직 방문하지않은 원소들을 큐에 삽입
-        for i in graph[v]: #그래프에 연결되어있는 노드들 수 만큼 반복 graph[1] = [2,3,8]이 연결되어있으므로 3번반복
+        for i in graph[v]: #그래프에 연결되어있는 노드들 수 만큼 반복 graph[1] = [2,3,8]이 연결되어있으므로 3번반복.
             if not visited[i]: #방문하지않았다면
                 queue.append(i) #큐에 삽입
                 visited[i] = True #방문기록 찍음
