@@ -7,8 +7,8 @@ def dfs(graph,v,visited):
 
     #현재 노드와 연결된 다른 노드를 재귀적으로 방문
     for i in graph[v]:
-        if not visited[i]:
-            dfs(graph,i,visited)
+        if not visited[i]: #False 처리되어있는 1차원방문 리스트
+            dfs(graph,i,visited) #재귀함수호출
 
 #각 노드가 연결된 정보를 리스트 자료형으로 표현 (2차원리스트)
 
