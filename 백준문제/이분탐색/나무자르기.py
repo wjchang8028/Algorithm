@@ -2,10 +2,8 @@
 def solution(array,m,start,end):
     
     while (start <= end):
-        mid = (start + end) // 2 # 중간
-
         total = 0
-
+        mid = (start + end) // 2 # 중간
         for i in array:
             if i > mid:
                 total += i-mid
