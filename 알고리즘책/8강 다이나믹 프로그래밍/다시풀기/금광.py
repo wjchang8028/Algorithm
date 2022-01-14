@@ -1,7 +1,7 @@
 n,m =  3,4
 mine = [[1,3,3,2],[2,1,4,1],[0,6,4,7]]
 print(mine)
-temp = []
+temp = mine
 
 for j in range(1,m):
     for i in range(n):
@@ -25,4 +25,5 @@ for j in range(1,m):
 
     for i in range(n):
         result = max(result,temp[i][m-1])
+    print(result)
     
