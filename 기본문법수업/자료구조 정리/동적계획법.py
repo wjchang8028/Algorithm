@@ -23,3 +23,7 @@ n = 99
 for i in range(3, n+1):
     d[i] = d[i-1] + d[i-2]
 print(d[n])
+
+
+                # LIS(가장 긴 증가하는 부분 수열)
+                # 점화식 : 모든 0 <= j < i 에 대하여, D[i] = max(D[i],D[j+1]) if array[j] < array[i]
