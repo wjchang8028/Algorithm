@@ -52,3 +52,30 @@ for i in range(1,n+1):
         print("도달할 수 없음")
     else:
         print(distance[i])
+
+# 힙을 사용한 개선된 다익스트라 O(ElogV) 노드가 5000개 이상일 경우 사용
+import heapq
+def heapdijkstra(start):
+    q = []
+    heapq.heappush(q,(0,start))
+    distance[start] = 0
+
+    while q:
+        dist,now = heapq.heappop(q)
+
+        if distance[now] < dist:
+            continue
+        for i in graph[now]:
+            cost = dist + i[1]
+            if cost < distance[i[0]]:
+                distance[i[0]] = cost
+                heapq.heappush(q,(cost,i[0]))
+
+heapdijkstra(start)
+
+for i in range(1, n+1):
+    if distance[i] == INF:
+        print("갈 수 없는 곳입니다")
+    else:
+        print(distance[i])
+
