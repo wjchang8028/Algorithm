@@ -11,7 +11,7 @@ for i in range(n):
 for i in range(1,n):
     for j in range(len(d[i])):
         if j == 0:
-            d[i][j] = d[i][j] + d[i-1][j]
+            d[i][j] = d[i][j] + d[i-1][j] # 현재 위치에 이전 위치까지의 저장된 값을 넣기
         elif j == len(d[i])-1:
             d[i][j] = d[i][j] + d[i-1][j-1]
         else:
