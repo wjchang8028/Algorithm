@@ -1,34 +1,42 @@
+import heapq
 import sys
-input = sys.stdin.readline
+
 INF = int(1e9)
+input = sys.stdin.readline
 
-t = int(input()) # testcase
+def dijkstra(airport,clock,n,m):
+    q = []
+    heapq.heappush(q,(1,0,0))
 
-for i in range(t): 
-    N,M,K = map(int,input().split()) # 공항, 총비용, 티켓수
+    clock[1][0] = 0
 
-    graph = [[INF]*(N+1) for _ in range(N+1)]
-
-    for _ in range(K):
-        start,end,cost,time = map(int,input().split()) # 출발공항, 도착공항, 비용, 소요시간
-
-        graph[start][end] = cost
-        graph[end][start] = cost
-      
-
-    for k in range(1,N+1):
-        for a in range(1,N+1):
-            for b in range(1,N+1):
-                if a == b:
-                    graph[a][b] = 0
-                else:
-                    graph[a][b] = min(graph[a][b], graph[a][k] + graph[k][b])
-                
+    for cost in range(m+1):
+        for here in range(1,n+1):
+            if clock[here][cost] == INF:
+                continue
     
+            distance = clock[here][cost]
+            for nextHere, nextCost, nextTime in airport[here]:
+                if cost + nextCost > m:
+                    continue
 
-    if graph[1][N] > M:
+                clock[nextHere][cost + nextCost] = min(clock[nextHere][cost+nextCost],distance + nextTime)
+    return clock
+
+t = int(input())
+
+for _ in range(t):
+    n,m,k = map(int,input().split())
+
+    airport = [[] for _ in range(n+1)]
+    clock = [[INF for _ in range(m+1)] for _ in range(n+1)]
+
+    for _ in range(k):
+        src, dst, cost, time = map(int,input().split())
+        airport[src].append((dst,cost,time))
+
+    clock = dijkstra(airport,clock,n,m)
+    if min(clock[n]) == INF:
         print("Poor KCM")
-    elif graph[1][N] <= M:
-        print(graph[1][N])
-
-
+    else:
+        print(min(clock[n]))
