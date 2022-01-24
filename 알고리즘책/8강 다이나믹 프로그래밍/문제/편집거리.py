@@ -1,3 +1,5 @@
+# 두 문자가 같은 경우 : dp[i][j] = dp[i-1][j-1]
+# 두 문자가 다른 경우 : dp[i][j] = 1 + min(dp[i][j-1] , dp[i-1][j] , dp[i-1][j-1]) # 삽입, 삭제 , 교체 순
 
 A = input()
 B = input()
@@ -22,6 +24,7 @@ def edit_dist(str1,str2):
             #문자가 다르다면 3가지 경우 최솟값
             else:
                 dp[i][j] = 1 + min(dp[i][j-1], dp[i-1][j], dp[i-1][j-1]) #삽입(왼쪽) , 삭제(위쪽) , 교체(왼쪽위) 중에서 최소비용 찾아 대입
+    print(dp)
     return dp[n][m]
 
 print(edit_dist(A,B))
