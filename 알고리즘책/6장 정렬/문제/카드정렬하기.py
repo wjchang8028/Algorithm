@@ -1,15 +1,25 @@
-# 다시 풀기
+import heapq
+
 n = int(input())
-array = []
+heap = []
 
-for _ in range(n):
-    array.append(int(input()))
-array.sort()
+for i in range(n):
+    data = int(input())
+    heapq.heappush(heap,data)
 
-total = 0
+result = 0
 
-for i in range(len(array)-1):
-    array[i+1] = array[i]+array[i+1]
-    total += array[i+1]
-print(total)
+# 힙에 원소가 1개남을때까지.
+while len(heap) != 1:
+    #가장 작은 2개의 카드 묶음 꺼내기
+    one = heapq.heappop(heap)
+    two = heapq.heappop(heap)
+
+    #카드 합쳐서 다시 삽입
+    sum_value = one + two
+    result += sum_value
+    heapq.heappush(heap,sum_value)
+
+print(result)
+
 
