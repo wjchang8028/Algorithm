@@ -1,5 +1,5 @@
 
-def wrong_solution(id_list, report, k):
+def wrong_solution(id_list, report, k): # 중복신고결과를 처리안해줌
     answer = []
     result = []
     temp = []
