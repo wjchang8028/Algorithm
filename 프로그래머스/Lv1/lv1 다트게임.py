@@ -1,3 +1,4 @@
+# 다시
 def solution(dartResult):
     answer = 0
     imsi = 0
