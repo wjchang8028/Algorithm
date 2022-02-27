@@ -1,5 +1,5 @@
 def solution(s):
-    
+
     lst = list(s)
     pcount=0
     ycount = 0
@@ -17,5 +17,17 @@ def solution(s):
     else:
         return False
 
+def other_solution(s):
+    a = s.lower().count('p') # 전부 소문자화 후 p의갯수 카운트
+    b = s.lower().count('y') # y갯수 카운트
+    print(a,b)
+
+    if a == b:
+        return True
+    else:
+        return False
+
+
 s="pPoooyY"
 solution(s)
+other_solution(s)
