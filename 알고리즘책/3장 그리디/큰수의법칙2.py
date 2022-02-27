@@ -1,5 +1,5 @@
-# 5 8 3
-# 2 4 5 4 6
+# 5 8 3 입력
+# 2 4 5 4 6 출력
 
 import sys
 n , m ,k = map(int,input().split())
