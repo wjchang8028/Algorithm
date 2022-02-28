@@ -14,7 +14,9 @@ print(list(permutations(item,2)))
 print(list(combinations(item,2)))
 
 #2개 이상 리스트조합
+print("product 사용")
 print(list(product(*items)))
+print("====")
 
 #리스트의 인자들을 전부 조합하는 경우(각 숫자를 뽑아서 만들수 있는 경우의 수 )
 print(list(chain.from_iterable(permutations(item,i)for i in range(len(item)+1)))) 
