@@ -14,6 +14,6 @@ def deciToBin(num, n): # 10진수에서 n 진수로
         rev_base += str(mod)
     print(rev_base)
     return rev_base[::-1] 
-    # 역순인 진수를 뒤집어 줘야 원래 변환 하고자하는 base가 출력
+    # 역순인 진수를 뒤집어 줘야 원래 변환 하고자하는 base가 출력 -> 원래출력은 반대로 나옴
     
 print(deciToBin(45, 3))
