@@ -3,7 +3,6 @@ from typing import Counter
 def solution(s):
     answer = []
     arr=[]
-
     for i in re.split('[{,}]',s):
         if i =="":
             pass
