@@ -17,3 +17,13 @@ def deciToBin(num, n): # 10진수에서 n 진수로
     # 역순인 진수를 뒤집어 줘야 원래 변환 하고자하는 base가 출력 -> 원래출력은 반대로 나옴
     
 print(deciToBin(45, 3))
+
+def convert(n, base): # n진수를 base진법으로 변환하는것 (중요!)
+        arr = "0123456789ABCDEF"
+        q, r = divmod(n, base)
+        if q == 0:
+            return arr[r]
+        else:
+            return convert(q, base) + arr[r]
+
+print(convert(15,16))
