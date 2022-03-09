@@ -10,7 +10,6 @@ def solution(citations):
         if i >= cnt:
             answer += 1
                  
-        
     
     print(answer)
     return answer
