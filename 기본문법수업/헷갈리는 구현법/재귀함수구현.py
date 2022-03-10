@@ -2,7 +2,7 @@
 def factorial(n):
     if n <= 1: # 0!,1! = 1
         return 1
-    return n * factorial(n-1)
+    return n * factorial(n-1) # 5 4 3 2 1 순서로 곱해진다
 
 print(factorial(5))
 
@@ -11,6 +11,6 @@ def gcd(a,b):
     if a % b == 0:
         return b
     else:
-        return gcd(b,a%b)
+        return gcd(b,a%b) # 192를 168로 나눈 나머지는 24(R) -> 192를 24로 나눈 나머지는 0 이므로 최대공약수는 24
 
 print(gcd(192,168))
