@@ -16,5 +16,5 @@ temp = [1,3,4,5]
 if all(value < num for num in temp):
     print("value값보다 전부 큽니다")
 else:
-    print("value값보다 하나라도 작은값이 있습니다")
+    print("value값보다 하나라도 같거나 작은값이 있습니다")
 
