@@ -22,8 +22,14 @@ print("====")
 print(list(chain.from_iterable(permutations(item,i)for i in range(len(item)+1)))) 
 print(list(chain.from_iterable(combinations(item,i)for i in range(len(item)+1)))) 
 
+
+
+print("==============모든 카드의 조합으로 만들 수 있는 수(중복없이)===============")
 numbers = ['1','7','3']
-a = set()
+a = set() 
 for i in range(len(numbers)):
     a |= set(map(int,map("".join,permutations(list(numbers), i+1 )))) #|= or연산자를 하고 난 값으로 새로이 update한다는 의미
-print(a)
+arr = list(a)
+arr.sort()
+print(arr)
+# [1, 3, 7, 13, 17, 31, 37, 71, 73, 137, 173, 317, 371, 713, 731]
