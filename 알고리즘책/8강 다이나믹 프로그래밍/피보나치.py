@@ -8,9 +8,11 @@
 # print(fibo(30)) # 2의n승 시간복잡도. 비효율적
 
 #피보나치 수열을 재귀적인 메모이제이션기법으로 구현
+import sys  
+sys.setrecursionlimit(10**8) # 10^8 까지 늘림.
 
 d = [0] * 100
-
+fiboArr = []
 #탑다운으로 구현
 def fibo(x):
     #종료조건 (1혹은 2일때 1반환)
@@ -22,7 +24,8 @@ def fibo(x):
     
     #아직 계산하지않은 문제라면 점화식에 따라서 피보나치 결과반환
     d[x] = fibo(x-1) + fibo(x-2)
-    print(d[x])
+    fiboArr.append(d[x])
     return d[x]
 
-print(fibo(20))
+print(fibo(50))
+print(fiboArr)
