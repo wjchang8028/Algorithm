@@ -1,4 +1,4 @@
-def solution(n, clockwise):
+def solution(n, clockwise): # 구현
     answer = [[]]
     matrix = [[0 for _ in range(n)] for _ in range(n)] # 2차원행렬
 
