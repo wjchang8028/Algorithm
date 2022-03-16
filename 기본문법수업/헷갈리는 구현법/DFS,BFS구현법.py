@@ -17,13 +17,25 @@ visited = [False] * 9 # 총 노드 + 1
 def dfs(graph,start_node,visited):
     visited[start_node] = True #방문한곳 => True
 
-    print(start_node,end=' ')
+    # print(start_node,end=' ')
+
+    if visited[3] == True:
+        # print(visited)
+        return visited
 
     for i in graph[start_node]:
         if not visited[i]:
             dfs(graph,i,visited)
 
 dfs(graph,start_node,visited)
+startNode = 1
+endNode = 3
+def solution(startNode,endNode):
+    dfs(graph,startNode,visited)
+    print(visited)
+    return 
+
+solution(startNode,endNode)
 
 start_node = 1
 visited = [False] * 9 # 총 노드 + 1

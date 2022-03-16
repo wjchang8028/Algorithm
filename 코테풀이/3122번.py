@@ -31,7 +31,7 @@ def solution(n, edges):
     for i in range(len(edges)):
         matrix[edges[i][0]].append(edges[i][1])
         matrix[edges[i][1]].append(edges[i][0])
-    print(matrix)
+    print("행렬",matrix)
     
     for i in range(len(a)):
         dfs(matrix,a[i][0],visited)
