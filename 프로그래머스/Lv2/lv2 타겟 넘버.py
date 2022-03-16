@@ -48,3 +48,31 @@ def other_solution(numbers,target):
     return answer2
 
 other_solution([1,1,1,1,1],3)
+
+
+# 각 수의 음 양수로 만들 수 있는 값들 중 target값이 되는 경우의 수
+my_answer = 0
+
+def my_dfs(index,numbers,target,value):
+    global my_answer
+
+    n = len(numbers)
+
+    if index == n and target == value: # 범위 설정 그리고 찾고자 하는 값이 나오면
+        my_answer += 1
+        return 
+    
+    if index == n: # 찾고자 하는 값이 안나와도 리턴
+        return 
+
+    my_dfs(index + 1,numbers,target, value + numbers[index]) # 양수 
+    my_dfs(index + 1,numbers,target, value - numbers[index]) # 음수
+
+def my_solution(numbers, target):
+    global my_answer
+    my_dfs(0,numbers,target,0)
+
+    print(my_answer)    
+    return 
+
+my_solution([1,1,1,1,1],3)
