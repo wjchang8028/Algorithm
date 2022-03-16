@@ -16,4 +16,8 @@ for i in range(n):
     elif x != 0:
         heapq.heappush(heap,x)
 
-    print(heap)
+# 4
+# 0
+# 14
+# 23
+# 0
