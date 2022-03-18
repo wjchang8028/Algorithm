@@ -39,23 +39,23 @@ def second(data):
 
             elif time == i[1]:
                 waiting.append(i[0])
-
-            elif time == i[2]:
-                if len(working) != 0:
-                    working.pop()
-                else:
-                    pass
+        
+        if time == data[0][2]:
+            if len(working) != 0:
+                working.pop()
+            else:
+                pass
 
             
             
            
-            print(time,"시간 진행 ", "work: ",working ,"wait: ", waiting)
+        print(time,"시 ", "work: ",working ,"wait: ", waiting)
 
 
 
     return result
 
-# second([[1,0,5],[2,2,2],[3,3,1],[4,4,1],[5,10,2]])
+second([[1,0,5],[2,2,2],[3,3,1],[4,4,1],[5,10,2]])
 
 def third(grid):
     answer = 0
@@ -77,7 +77,8 @@ def third(grid):
                     width += 1
                 
                 if grid[x][y] != num:
-                    
+                    pass
+
 
             print(width)
             for i in range(width):
@@ -89,5 +90,5 @@ def third(grid):
     print(answer)
     return answer
 
-third([[2,1,1,3,5,1],[1,1,3,3,5,5],[8,3,3,3,1,5],[3,3,3,4,4,4],[3,3,4,4,4,4],[1,4,4,4,4,4]])
-third([[0,1,1],[1,1,0]])
+# third([[2,1,1,3,5,1],[1,1,3,3,5,5],[8,3,3,3,1,5],[3,3,3,4,4,4],[3,3,4,4,4,4],[1,4,4,4,4,4]])
+# third([[0,1,1],[1,1,0]])
