@@ -16,7 +16,7 @@ b = list(c.values()) #arr의 키값에 묶여있는 값 카운트(3개,4개,2개
 print(b) # [3, 4, 2, 4]
 
 #Counter마크를 제거한 리스트(빈도수에따라서 자동정렬)
-mostcounter = Counter(word).most_common()
+mostcounter = Counter(word).most_common() # 많은 순서대로 정렬.
 print(mostcounter) # [('l', 3), ('o', 2), ('H', 1), ('e', 1), (' ', 1), ('W', 1), ('r', 1), ('d', 1), ('!', 1)]
 
 #인자(2) 갯수 이상의 문자들만 출력
