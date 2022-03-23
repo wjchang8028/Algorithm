@@ -21,6 +21,7 @@ def solution(skill, skill_trees):
 
 
     print(answer)
+    print()
     return answer
 
 
