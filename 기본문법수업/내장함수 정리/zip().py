@@ -15,14 +15,18 @@ for i in range(3):
 #리스트에 있는 zip을 그룹별로 unpacking
 pairs = list(zip(numbers,letters)) #zip을 리스트에 담기
 numbers,letters =zip(*pairs) #언패킹
-print(numbers)
-print(letters)
+print(numbers) # (1, 2, 3)
+print(letters) # ('A', 'B', 'C')
 
 
 #병렬처리 (여러그룹의 인자들이 차례로 출력)
 for number,lower,upper in zip("12345","abcde","ABCDE"):
     print(number,lower,upper)
-
+# 1 a A
+# 2 b B
+# 3 c C
+# 4 d D
+# 5 e E
 
 
 #dictionary화 (두개 리스트) *주의사항 : 리스트의 인자가 다를땐 가장짧은 인자기준으로 데이터가 엮이고 나머진 버려짐
