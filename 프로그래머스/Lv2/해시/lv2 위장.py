@@ -5,9 +5,10 @@ def solution(clothes):
     hash_clothes = {}
     
     for value,key in clothes:
-        # hash_clothes.setdefault(x[1],[]).append(x[0])
-        hash_clothes[key] = hash_clothes.get(key,0) + 1
-        print("get",hash_clothes.get(key,0) + 1)
+
+        # hash_clothes[key] = hash_clothes.get(key,0) + 1 # 두 방법 전부 가능
+        hash_clothes.setdefault(key,0)
+        hash_clothes[key] += 1
     
     print(hash_clothes)
 
