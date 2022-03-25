@@ -1,5 +1,4 @@
 from collections import defaultdict
-from itertools import combinations
 
 
 def solution(clothes):
@@ -8,6 +7,7 @@ def solution(clothes):
     for value,key in clothes:
         # hash_clothes.setdefault(x[1],[]).append(x[0])
         hash_clothes[key] = hash_clothes.get(key,0) + 1
+        print("get",hash_clothes.get(key,0) + 1)
     
     print(hash_clothes)
 
