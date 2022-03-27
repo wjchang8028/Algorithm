@@ -135,7 +135,7 @@ def fourthsolution(arr, brr):
         print(arr,temp)
 
     
-    print(answer)
+    # print(answer)
     return answer
 
 # solution([3, 7, 2, 4],[4, 5, 5, 2])
