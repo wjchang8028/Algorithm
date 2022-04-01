@@ -23,6 +23,7 @@ def solution(n, k):
     answer = 0
     
     transited = deciToBin(n, k) # 진법변환
+    print(transited)
     transited = re.sub('0+', '0', transited) # 정규식 표현법
     if transited[0] == '0':
         transited = transited[1:]
@@ -40,4 +41,3 @@ def solution(n, k):
 
 solution(437674,3)
 solution(110011,10)
-solution(524287, 2)
