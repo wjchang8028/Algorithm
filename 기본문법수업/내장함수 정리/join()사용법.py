@@ -7,3 +7,4 @@ strtup = ''.join(tupl)
 
 print(strlst)
 print(strtup)
+
