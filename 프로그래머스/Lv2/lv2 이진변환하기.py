@@ -39,3 +39,18 @@ def solution(s):
 
 solution("110010101001")
 solution("01110")
+
+def other_solution(s):
+    cnt, zero_del = 0,0
+
+    while s != '1':
+        cnt += 1
+        num = s.count('1')
+        zero_del += len(s) - num
+        s = bin(num)[2:]
+    answer = [cnt,zero_del]
+    print(answer)
+    return answer
+
+other_solution("110010101001")
+other_solution("01110")
