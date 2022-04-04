@@ -7,7 +7,7 @@ def solution(dirs):
     for i in dirs:
         nx,ny = x + move[i][0] , y + move[i][1]
         if -5 <= nx <= 5 and -5 <= ny <= 5:
-            movelist.add((x,y,nx,ny))
+            movelist.add((x,y,nx,ny)) # 같은 목적지 좌표지만 방향이 다른 경우
             movelist.add((nx,ny,x,y))
             x,y = nx,ny 
 
