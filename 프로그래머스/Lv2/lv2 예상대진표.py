@@ -27,3 +27,15 @@ def solution(n,a,b):
     return answer
 
 solution(8,4,7)
+
+
+def other_solution(n,a,b):
+    answer = 0
+
+    while a != b:
+        answer += 1
+        a,b = (a+1) // 2 , (b+1) // 2
+    
+    return answer
+
+print(other_solution(8,4,7))
