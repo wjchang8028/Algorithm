@@ -20,6 +20,7 @@ print(letters) # ('A', 'B', 'C')
 
 
 #병렬처리 (여러그룹의 인자들이 차례로 출력)
+#여러 개의 리스트를 인자만 같다면 한번에 묶음 가능
 for number,lower,upper in zip("12345","abcde","ABCDE"):
     print(number,lower,upper)
 # 1 a A
