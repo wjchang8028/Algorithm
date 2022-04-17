@@ -22,7 +22,7 @@ print(graph)
 
 def dfs(graph,v,visited):
     visited[v] = True
-    print(v,end=' ')
+    print(v,end=' ') //단순출력
 
     for i in graph[v]:
         if not visited[i]:
