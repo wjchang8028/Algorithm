@@ -1,4 +1,4 @@
-# 다시풀이
+# 재 풀이
 from itertools import combinations, permutations
 imsi = []
 
