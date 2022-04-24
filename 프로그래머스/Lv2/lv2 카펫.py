@@ -1,3 +1,4 @@
+# 카펫크기 문제
 def solution(brown, yellow):
     answer = []
     temp = []
