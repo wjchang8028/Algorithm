@@ -1,5 +1,5 @@
 # 하나의 리스트에서 모든 조합을 계산을 해야 한다면, permutations, combinations을 사용
-# 두개 이상의 리스트에서 모든 조합을 계산해야 한다면, product를 사용
+# 두개 이상의 리스트에서 모든 조합을 계산해야 한다면, product를 사용.
 
 from itertools import permutations
 from itertools import combinations
