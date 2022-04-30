@@ -9,7 +9,7 @@ def rotate_matrix_90(a):
             result[j][n-i-1] = a[i][j]
     return result
 
-#자물쇠의 중간부분이 전부 1인지 확인
+#자물쇠의 중간부분이 전부 1인지 확인.
 def check(new_lock):
     lock_length = len(new_lock) // 3
     for i in range(lock_length,lock_length * 2):
