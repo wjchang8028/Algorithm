@@ -4,7 +4,7 @@ from collections import Counter
 word = "Hello World!"
 c = Counter(word)
 array = list(c.keys())
-print(array) # ['H', 'e', 'l', 'o', ' ', 'W', 'r', 'd', '!']
+print(array) # ['H', 'e', 'l', 'o', ' ', 'W', 'r', 'd', '!'] #문법
 
 
 arr = [1,1,1,2,2,2,2,5,5,4,4,4,4] 
