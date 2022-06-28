@@ -18,5 +18,5 @@ for i in range(case):
         if sum >= distance:
             break
     print(cnt)
-    
+    #자바전환
     
