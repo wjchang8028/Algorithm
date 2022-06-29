@@ -1,4 +1,5 @@
 
+
 def firstsolution(logs):
     answer = 0
     lst = ['team_name','application_name','error_level','message']
