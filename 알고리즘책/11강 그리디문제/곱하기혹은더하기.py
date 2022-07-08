@@ -5,7 +5,7 @@ array = list(input())
 array.sort()
 
 array = list(map(int,array))
-total = 1
+total = 10
 
 print(array)
 while 0 in array: # array 안에 0이있으면 전부제거
