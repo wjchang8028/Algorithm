@@ -8,7 +8,7 @@ array = list(map(int,array))
 total = 10
 
 print(array)
-while 0 in array: # array 안에 0이있으면 전부제거
+while 0 in array: # array 안에 0이있으면 전부제거함
     array.remove(0)
 
 for i in array:
