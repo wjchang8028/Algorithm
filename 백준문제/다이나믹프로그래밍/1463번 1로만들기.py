@@ -12,6 +12,7 @@ def solution(n):
             d[i] = min(d[i],d[i//2] + 1)
 
 
+            
     
     print(d[n])
     return d[n]
