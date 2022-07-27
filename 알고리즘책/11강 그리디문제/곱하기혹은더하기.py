@@ -2,7 +2,7 @@
 
 array = list(input())
 
-array.sort()
+array.sort() # 정렬
 
 array = list(map(int,array))
 total = 10
